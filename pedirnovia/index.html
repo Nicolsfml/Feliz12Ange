@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Quieres seguir siendo mi novia?</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="valentines-day-card">
+        <input id="open" type="checkbox">
+        <label class="open" for="open"></label>
+      <div class="card-front">
+        <div class="note">Click para abrirme</div>
+      </div>
+        
+        <div class="card-inside">
+          <div class="text-one">¿Quieres
+          </div>
+          <div class="heart"></div>
+          <div class="smile"></div>
+          <div class="eyes"></div>                    
+      </div>
+      </div>
+          <button id="yesBtn">Si</button>
+          <button id="noBtn">No</button>              
+            
+
+
+      <script>
+        const yesBtn = document.querySelector('#yesBtn');
+        yesBtn.addEventListener('click',function () {
+            alert('Yo también quiero seguir siendo tu novio. Estaremos juntos por siempre jeje, Te amo:( amor de mi alma entera')
+        });
+
+        const noBtn = document.querySelector('#noBtn');
+
+        noBtn.addEventListener('mouseover', function () {
+            const randomX = parseInt(Math.random()*100);
+            const randomY = parseInt(Math.random()*100);
+            noBtn.style.setProperty('top',randomY+'%');
+            noBtn.style.setProperty('left',randomX+'%');
+            noBtn.style.setProperty('transform',`translate(-${randomX}%,-${randomY}%)`);
+        })
+        </script>
+</body>
+</html>
